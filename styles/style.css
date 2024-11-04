@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --first-color: #926e56;
+    --second-color: #f3eee6;
+    --third-color: #382110;
+    --fourth-color: #544539;
+    --fifth-color: #d1c4ac;
+}
+
+body {
+    background-color: var(--second-color);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#horario {
+    background-color: var(--first-color);
+    cursor: pointer;
+}
+
+#checkout-btn,
+#close-monal-btn,
+#close-modal-details {
+    background-color: var(--first-color);
+    color: var(--second-color);
+    font-weight: bold;
+    padding: 0.5em 1em;
+    border-radius: 0.5em;
+    transition: .3s;
+    cursor: pointer;
+}
+
+#close-modal-details {
+    text-align: center;
+    max-width: 6em;
+    margin: 0 auto;
+    background-color: red;
+}
+
+#open-closed {
+    text-align: center;
+    max-width: 8em;
+    padding: 0.5em 0em;
+    margin: 0 auto;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+    color: white;
+    border-radius: 0.8em;
+    background-color: green;
+}
+
+#close-monal-btn,
+#close-modal-details {
+    background-color: red;
+}
+
+#close-monal-btn:hover,
+#close-modal-details:hover {
+    background-color: rgb(255, 75, 75);
+}
+
+#card-btn {
+    background-color: var(--third-color);
+}
+
+#button {
+    transition: .3s;
+}
+
+#button:hover {
+    color: var(--fifth-color);
+    font-size: 17px;
+}
+
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: #5e5e5e;
+    left: 1;
+    border-radius: 1px;
+}
+
+::-webkit-scrollbar-thumb {
+    width: 3px;
+    background-color: #dcdcdc;
+    border-radius: 5px;
+}

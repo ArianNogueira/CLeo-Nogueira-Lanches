@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLéo Nogueira Lanches</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+    <!-- META TEG OG -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Cléo Nogueira Lanches" />
+    <meta property="og:image" content="assets/Logo.png" />
+    <meta property="og:description" content="A melhor lanchonete da ilha" />
+    <meta property="og:site_name" content="Cléo Nogueira Lanches" />
+
+    <link rel="shortcut icon" href="assets/Logo Favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles/output.css">
+</head>
+
+<body>
+
+    <header class="w-full h-[420px] bg-zinc-900 bg-home bg-cover bg-center">
+        <div class="w-full h-full flex flex-col justify-center items-center">
+            <img src="assets/Logo.png" alt="Logo da Lanchonete"
+                class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-200 cursor-pointer">
+            <h1 class="text-4xl mt-4 mb-2 font-bold text-white">Cléo Nogueira Lanches</h1>
+
+            <div class="text-white font-medium px-5 text-justify md:max-w-4xl">
+                <span>
+                    Seja bem-vindo a Cléo Nogueira Lanches! Aqui, você encontra lanches preparados com carinho,
+                    ingredientes frescos e aquele sabor que faz a diferença. Nossa missão é transformar cada refeição em
+                    um momento especial, seja para matar a fome do dia a dia ou para curtir com quem você gosta.
+                    Aproveite nosso cardápio variado e delicie-se com o que há de melhor!
+                </span>
+            </div>
+
+            <div id="details" class=" text-white font-medium bg-[#926e56] px-5 py-1 rounded-lg mt-1 md:mt-5 cursor-pointer">
+                <p>Veja mais detalhes</p>
+            </div>
+        </div>
+    </header>
+
+    <div id="menu">
+
+        <aside class="w-full p-2 mb-5 sticky top-0 bg-[#926e56] shadow-lg shadow-black/50">
+            <div>
+                <ul class="flex justify-around items-center w-full">
+                    <a href="#Comida-Cleo">
+                        <li class="p-2 rounded-xl text-white duration-100 hover:bg-[#544539]">
+                            Comidas da Cléo
+                        </li>
+                    </a>
+                    <a href="#lanches">
+                        <li class="p-2 rounded-xl text-white duration-100 hover:bg-[#544539]">
+                            Lanches
+                        </li>
+                    </a>
+                    <a href="#bebidas">
+                        <li class="p-2 rounded-xl text-white duration-100 hover:bg-[#544539]">
+                            Bebidas
+                        </li>
+                    </a>
+                    <a href="#sobremesas">
+                        <li class="p-2 rounded-xl text-white duration-100 hover:bg-[#544539]">
+                            Sobremesas
+                        </li>
+                    </a>
+                </ul>
+            </div>
+        </aside>
+
+        <div class="mx-auto max-w-7xl px-2 my-3" id="Comida-Cleo">
+            <h2 class="font-bold text-3xl mb-5 ">Comidas da Cléo</h2>
+        </div>
+        <main>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 lg:grid-cols-2 items-center mx-auto max-w-7xl px-5 mb-12">
+                <div class="flex items-center gap-2 w-full morning">
+                    <!-- Imagem da comida -->
+                    <img src="assets/Churrasco.jpg" alt="churrasco"
+                        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+                    <div class="w-full">
+                        <!-- Nome da Comida -->
+                        <!-- <p class="text-lg font-bold">Churrasco</p> -->
+                        <!-- Descrição -->
+                        <p class="my-2">
+                            <span class="text-lg font-bold">Churrasco</span> <br> 
+                            <span class="text-sm"><strong>Acompanhamento:</strong> Arroz Branco ou Toucinho, Feijão Carioca, Macarrão, Purê, Salada, Farofa, Macaxeira Frita</span>
+                        </p>
+                        <form class="mt-2 lg:flex items-center justify-between" id="select-barbecue">
+                            <laber>
+                                <input type="radio" name="barbecue" value="Churrasco de Alcatra"> Alcatra
+                            </laber>
+                            <laber>
+                                <input type="radio" name="barbecue" value="Churrasco de Picanha"> Picanha
+                            </laber>
+                            <laber>
+                                <input type="radio" name="barbecue" value="Churrasco de Frango"> Frango
+                            </laber>
+                            <laber>
+                                <input type="radio" name="barbecue" value="Churrasco Misto"> Misto
+                            </laber>
+                            <laber>
+                                <input type="radio" name="barbecue" value="Churrasco de Leitão"> Leitão
+                            </laber>
+                        </form>
+                        <div class="flex items-center gap-2 justify-between mt-3">
+                            <p class="font-bold text-lg">R$ 20.00</p>
+                            <button
+                                class="bg-[#382110] hover:bg-[#926e56] duration-100 px-5 py-1 rounded add-to-cart-btn "
+                                data-name="Churrasco" data-price="20.00" data-caminho="../assets/Churrasco.jpg">
+                                <i class="fa fa-cart-plus text-lg text-white"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex gap-2 w-full morning">
+                    <!-- Imagem da comida -->
+                    <img src="assets/Caldo.webp" alt="Foto Caldo de Ovos"
+                        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+                    <div class="w-full h-full">
+                        <!-- Nome da Comida -->
+                        <p class="text-lg font-bold" class="text-lg font-bold">Caldo de Ovos</p>
+                        <!-- Descrição -->
+                        <p>Detalhes </p>
+                        <div class="flex items-center gap-2 justify-between mt-3">
+                            <form class="flex gap-x-2 font-bold text-lg h-full mt-5">
+                                <label>
+                                    <input type="radio" name="broth" value="Caldo Porção de 15"> R$ 15,00
+                                </label>
+                                <label>
+                                    <input type="radio" name="broth" value="Caldo Porção de 20"> R$ 20,00
+                                </label>
+                            </form>
+                            <button
+                                class="bg-[#382110] hover:bg-[#926e56] duration-100 px-5 py-1 rounded add-to-cart-btn "
+                                data-name="Caldo de Ovos" data-price="" data-checked="checked" data-caminho="../assets/Caldo.webp">
+                                <i class="fa fa-cart-plus text-lg text-white"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex gap-2 w-full morning">
+                    <!-- Imagem da comida -->
+                    <img src="assets/Sopa.jpg" alt="Logo Sopa"
+                        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+                    <div class="w-full">
+                        <!-- Nome da Comida -->
+                        <p class="text-lg font-bold">Sopa</p>
+                        <!-- Descrição -->
+                        <p>Detalhes </p>
+                        <div class="flex items-center gap-2 justify-between mt-3">
+                            <p class="font-bold text-lg">R$ 20.00</p>
+                            <button
+                                class="bg-[#382110] hover:bg-[#926e56] duration-100 px-5 py-1 rounded add-to-cart-btn"
+                                data-name="Sopa" data-price="20.00" data-caminho="../assets/Sopa.jpg">
+                                <i class="fa fa-cart-plus text-lg text-white"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex gap-2 w-full night">
+                    <!-- Imagem da comida -->
+                    <img src="assets/Assado de Panela.png" alt="Logo Assado"
+                        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+                    <div class="w-full">
+                        <!-- Nome da Comida -->
+                        <p class="text-lg font-bold">Assado de Panela</p>
+                        <!-- Descrição -->
+                        <p>Detalhes </p>
+                        <div class="flex items-center gap-2 justify-between mt-3">
+                            <p class="font-bold text-lg">R$ 20.00</p>
+                            <button
+                                class="bg-[#382110] hover:bg-[#926e56] duration-100 px-5 py-1 rounded add-to-cart-btn"
+                                data-name="Assado de Panela" data-price="20.00" data-caminho="../assets/Assado de Panela.png">
+                                <i class="fa fa-cart-plus text-lg text-white"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex gap-2 w-full night">
+                    <!-- Imagem da comida -->
+                    <img src="assets/Cozido de Galinha.png" alt="Logo Galinha"
+                        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+                    <div class="w-full">
+                        <!-- Nome da Comida -->
+                        <p class="text-lg font-bold">Galinha Caipira</p>
+                        <!-- Descrição -->
+                        <p>Detalhes </p>
+                        <div class="flex items-center gap-2 justify-between mt-3">
+                            <p class="font-bold text-lg">R$ 20.00</p>
+                            <button
+                                class="bg-[#382110] hover:bg-[#926e56] duration-100 px-5 py-1 rounded add-to-cart-btn"
+                                data-name="Galinha Caipira" data-price="20.00" data-caminho="../assets/Cozido de Galinha.png">
+                                <i class="fa fa-cart-plus text-lg text-white"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <hr class="border-1 border-[#382110] mb-5">
+
+            <div class="mx-auto max-w-7xl px-2 my-2" id="lanches">
+                <h2 class="font-bold text-3xl mb-5">Lanches</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-12">
+                <div class="flex gap-2 w-full morning">
+                    <!-- Imagem da comida -->
+                    <img src="assets/Macarronada.jpg" alt="Logo Macarronada"
+                        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+                    <div class="w-full">
+                        <!-- Nome da Comida -->
+                        <p class="text-lg font-bold">Macarronada</p>
+                        <!-- Descrição -->
+                        <p>Detalhes </p>
+                        <div class="flex items-center gap-2 justify-between mt-3">
+                            <p class="font-bold text-lg">R$ 20.00</p>
+                            <button
+                                class="bg-[#382110] hover:bg-[#926e56] duration-100 px-5 py-1 rounded add-to-cart-btn"
+                                data-name="Macarronada" data-price="18.90" data-caminho="../assets/Macarronada.jpg">
+                                <i class="fa fa-cart-plus text-lg text-white"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex gap-2 w-full morning">
+                    <!-- Imagem da comida -->
+                    <img src="assets/Pastel.jpg" alt="Logo Pastel"
+                        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+                    <div class="w-full">
+                        <!-- Nome da Comida -->
+                        <p class="text-lg font-bold">Pastel</p>
+                        <!-- Descrição -->
+                        <p>Faça sua escolha:</p>
+                        <form class="flex items-center justify-between mt-2" id="fried-pastry-id">
+                            <label for="fried-pastry">
+                                <input type="radio" name="fried-pastry" value="Pastel de Queijo"> Queijo
+                            </label>
+                            <label for="fried-pastry">
+                                <input type="radio" name="fried-pastry" value="Pastel de Carne"> Carne
+                            </label>
+                            <label for="fried-pastry">
+                                <input type="radio" name="fried-pastry" value="Pastel de Pizza"> Pizza
+                            </label>
+                        </form>
+                        <div 
+                        class="flex items-center gap-2 justify-between mt-3">
+                            <p class="font-bold text-lg">R$ 10.00</p>
+                            <button
+                                class="bg-[#382110] hover:bg-[#926e56] duration-100 px-5 py-1 rounded add-to-cart-btn"
+                                data-name="Pastel" data-price="10.00" data-caminho="../assets/Pastel.jpg">
+                                <i class="fa fa-cart-plus text-lg text-white"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex gap-2 w-full morning">
+                    <!-- Imagem da comida -->
+                    <img src="assets/Batata.jpg" alt="Logo Batata Frita"
+                        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+                    <div class="w-full">
+                        <!-- Nome da Comida -->
+                        <p class="text-lg font-bold">Batata Frita</p>
+                        <!-- Descrição -->
+                        <p>Porção de batata crocante</p>
+                        <div class="flex items-center gap-2 justify-between mt-3">
+                            <div class="flex gap-x-2 font-bold text-lg h-full mt-5">
+                                <label>
+                                    <input type="radio" name="price-french-fries" value="Batata Frita porção de 12"> R$ 12,00
+                                </label>
+                                <label>
+                                    <input type="radio" name="price-french-fries" value="Batata Frita porção de 18"> R$ 18,00
+                                </label>
+                            </div>
+                            <button
+                                class="bg-[#382110] hover:bg-[#926e56] duration-100 px-5 py-1 rounded add-to-cart-btn"
+                                data-name="Batata Frita" data-price="" data-caminho="../assets/Batata.jpg">
+                                <i class="fa fa-cart-plus text-lg text-white"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex gap-2 w-full morning">
+                    <!-- Imagem da comida -->
+                    <img src="assets/Lasanha.png" alt="Logo Lasanha"
+                        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+                    <div class="w-full">
+                        <!-- Nome da Comida -->
+                        <p class="text-lg font-bold">Lasanha</p>
+                        <!-- Descrição -->
+                        <p>Fatia bem recheada</p>
+                        <div class="flex items-center gap-2 justify-between mt-3">
+                            <p class="font-bold text-lg">R$ 20.00</p>
+                            <button
+                                class="bg-[#382110] hover:bg-[#926e56] duration-100 px-5 py-1 rounded add-to-cart-btn"
+                                data-name="Lasanha" data-price="20.00" data-caminho="../assets/Lasanha.png">
+                                <i class="fa fa-cart-plus text-lg text-white"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="border-1 border-[#382110] mb-5">
+
+            <div class="mx-auto max-w-7xl px-2 my-2" id="bebidas">
+                <h2 class="font-bold text-3xl mb-5">Bebidas</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-12"
+                id="menu">
+
+                <div class="flex gap-2 w-full morning">
+                    <!-- Imagem da comida -->
+                    <img src="assets/Coca.png" alt="Logo Coca"
+                        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+
+
+                    <div class="w-full">
+                        <!-- Nome da Comida -->
+                        <p class="text-lg font-bold">Coca-Cola</p>
+                        <!-- Descrição -->
+                        <div class="flex items-center gap-2 justify-between mt-3">
+                            <p class="font-bold text-lg">R$ 6.00</p>
+                            <button
+                                class="bg-[#382110] hover:bg-[#926e56] duration-100 px-5 py-1 rounded add-to-cart-btn"
+                                data-name="Coca-Cola" data-price="6.00" data-caminho="../assets/Coca.png">
+                                <i class="fa fa-cart-plus text-lg text-white"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="flex gap-2 w-full morning">
+                    <!-- Imagem da comida -->
+                    <img src="assets/Coca Zero.png" alt="Logo Coca Zero"
+                        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+
+
+                    <div class="w-full">
+                        <!-- Nome da Comida -->
+                        <p class="text-lg font-bold">Coca-Cola Zero</p>
+                        <!-- Descrição -->
+                        <div class="flex items-center gap-2 justify-between mt-3">
+                            <p class="font-bold text-lg">R$ 5.00</p>
+                            <button
+                                class="bg-[#382110] hover:bg-[#926e56] duration-100 px-5 py-1 rounded add-to-cart-btn"
+                                data-name="Coca-Cola Zero" data-price="5.00" data-caminho="../assets/Coca Zero.png">
+                                <i class="fa fa-cart-plus text-lg text-white"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="flex gap-2 w-full morning">
+                    <!-- Imagem da comida -->
+                    <img src="assets/Guarana.png" alt="Logo Guarana"
+                        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+
+                    <div class="w-full">
+                        <!-- Nome da Comida -->
+                        <p class="text-lg font-bold">Guarana</p>
+                        <!-- Descrição -->
+                        <div class="flex items-center gap-2 justify-between mt-3">
+                            <p class="font-bold text-lg">R$ 6.00</p>
+                            <button
+                                class="bg-[#382110] hover:bg-[#926e56] duration-100 px-5 py-1 rounded add-to-cart-btn"
+                                data-name="Guarana" data-price="6.00" data-caminho="../assets/Guarana.png">
+                                <i class="fa fa-cart-plus text-lg text-white"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex gap-2 w-full morning">
+                    <!-- Imagem da comida -->
+                    <img src="assets/Suco Cupuaçu .png" alt="Logo Suco Cupuaçu"
+                        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+
+                    <div class="w-full">
+                        <!-- Nome da Comida -->
+                        <p class="text-lg font-bold">Suco de Cupuaçu</p>
+                        <!-- Descrição -->
+                        <div class="flex items-center gap-2 justify-between mt-3">
+                            <p class="font-bold text-lg">R$ 12.00</p>
+                            <button
+                                class="bg-[#382110] hover:bg-[#926e56] duration-100 px-5 py-1 rounded add-to-cart-btn"
+                                data-name="Suco de Cupuaçu" data-price="12.00"
+                                data-caminho="../assets/Suco Cupuaçu .png">
+                                <i class="fa fa-cart-plus text-lg text-white"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex gap-2 w-full morning">
+                    <!-- Imagem da comida -->
+                    <img src="assets/Suco Goiaba.png" alt="Logo Suco de Goiaba"
+                        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+
+                    <div class="w-full">
+                        <!-- Nome da Comida -->
+                        <p class="text-lg font-bold">Suco de Goiaba</p>
+                        <!-- Descrição -->
+                        <div class="flex items-center gap-2 justify-between mt-3">
+                            <p class="font-bold text-lg">R$ 10.00</p>
+                            <button
+                                class="bg-[#382110] hover:bg-[#926e56] duration-100 px-5 py-1 rounded add-to-cart-btn"
+                                data-name="Suco de Goiaba" data-price="10.00" data-caminho="../assets/Suco Goiaba.png">
+                                <i class="fa fa-cart-plus text-lg text-white"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex gap-2 w-full morning">
+                    <!-- Imagem da comida -->
+                    <img src="assets/Suco Abacaxi.png" alt="Logo Suco de Abacaxi"
+                        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+
+                    <div class="w-full">
+                        <!-- Nome da Comida -->
+                        <p class="text-lg font-bold">Suco de Abacaxi</p>
+                        <!-- Descrição -->
+                        <div class="flex items-center gap-2 justify-between mt-3">
+                            <p class="font-bold text-lg">R$ 6.00</p>
+                            <button
+                                class="bg-[#382110] hover:bg-[#926e56] duration-100 px-5 py-1 rounded add-to-cart-btn"
+                                data-name="Suco de Abacaxi" data-price="6.00" data-caminho="../assets/Suco Abacaxi.png">
+                                <i class="fa fa-cart-plus text-lg text-white"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="border-1 border-[#382110] mb-5">
+
+            <div class="mx-auto max-w-7xl px-2 my-2" id="sobremesas">
+                <h2 class="font-bold text-3xl mb-5">Sobremesas</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-12"
+                id="menu">
+
+                <div class="flex items-center gap-2 w-full morning">
+                    <!-- Imagem da comida -->
+                    <img src="assets/Picolé.jpg" alt="Logo Picolé"
+                        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+
+                    <div class="w-full">
+                        <!-- Nome da Comida -->
+                        <p class="text-lg font-bold">Picolé</p>
+                        <!-- Descrição -->
+                        <!-- <div class="flex items-center gap-2 justify-between mt-3">
+                            <p class="font-bold text-lg">R$ (Valores no Estabelecimento)</p>
+                            <button
+                                class="bg-[#382110] hover:bg-[#926e56] duration-100 px-5 py-1 rounded add-to-cart-btn"
+                                data-name="Picolé" data-price="0.00" data-caminho="../assets/Picolé.jpg">
+                                <i class="fa fa-cart-plus text-lg text-white"></i>
+                            </button>
+                        </div> -->
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-2 w-full morning">
+                    <!-- Imagem da comida -->
+                    <img src="assets/Açaí.jpg" alt="Logo Açaí"
+                        class="w-32 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+
+                    <div class="w-full">
+                        <!-- Nome da Comida -->
+                        <p class="text-lg font-bold ml-3">Açaí</p>
+                        <!-- Descrição -->
+                        <!-- <div class="flex items-center gap-2 justify-between mt-3">
+                            <p class="font-bold text-lg">R$ (Valor de acordo com o peso)</p>
+                            <button
+                                class="bg-[#382110] hover:bg-[#926e56] duration-100 px-5 py-1 rounded add-to-cart-btn"
+                                data-name="Açaí	" data-price="0.00" data-caminho="../assets/Açaí.jpg">
+                                <i class="fa fa-cart-plus text-lg text-white"></i>
+                            </button>
+                        </div> -->
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <div class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden" id="card-modal">
+        <div class="bg-white p-5 rounded-md min-w-[90%] max-h-[80vh] md:min-w-[600px] overflow-y-scroll flex flex-col">
+            <button class="text-right"><i class="fa-solid fa-x" id="icone-x"></i></button>
+
+            <h2 class="text-center font-bold text-2xl mb-5">Meu Carrinho</h2>
+
+            <div id="card-items" class="flex flex-col justify-between mb-2">
+            </div>
+
+            <p class="font-bold text-right">Total: <span id="card-total">0.00</span></p>
+
+            <p class="font-bold mt-4">Informe o seu nome:</p>
+            <input type="text" placeholder="Digite seu nome aqui" id="name"
+                class="w-full border-2 p-1 rounded my-1 outline-none" required>
+            <p class="text-red-500 hidden" id="name-warn">Por favor, digite seu nome!</p>
+
+           
+
+            <p class="font-bold mt-4">Adicione uma observação no seu pedido:</p>
+            <textarea id="observation" rows="3" class="w-full min-h-[100px] border-2 p-1 rounded my-1 outline-none resize-none" placeholder="Informe sua observação aqui"></textarea>
+
+            <div class="flex items-center justify-between mt-5 w-full">
+                <button id="close-monal-btn">Fechar</button>
+                <button id="checkout-btn">Finalizar pedido</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-black/60 w-full h-full fixed items-center justify-center top-0 left-0 z-[99] hidden"
+        id="modal-details">
+        <div
+            class="bg-white p-5 rounded-md w-2 flex flex-col gap-y-3 mb-8 px-4 min-w-[90%] max-h-[90vh] md:min-w-[500px] text-[#544539] overflow-y-scroll">
+            <button class="text-right"><i class="fa-solid fa-x" id="icone-details-x"></i></button>
+            <div class="-mt-5">
+                <div id="open-closed">Aberto</div>
+                <h3 class="text-xl text-[#382110] font-bold mb-2">Horários de Funcionamento</h3>
+                <ul class="flex flex-col gap-y-2 font-medium">
+                    <li><strong>DOM:</strong> Fechado</li>
+                    <li><strong>SEG:</strong> 18h às 22h30</li>
+                    <li><strong>TER:</strong> 10h às 13h && 18h às 22h30</li>
+                    <li><strong>QUA:</strong> 10h às 13h && 18h às 22h30</li>
+                    <li><strong>QUI:</strong> 10h às 13h && 18h às 22h30</li>
+                    <li><strong>SEX:</strong> 10h às 13h && 18h às 22h30</li>
+                    <li><strong>SÁB:</strong> 10h às 13h && 18h às 22h30</li>
+                </ul>
+            </div>
+            <div class="flex flex-col gap-y-3">
+                <div>
+                    <h3 class="text-xl text-[#382110] font-bold mb-2">Contato</h3>
+                    <p class="text-blue-500">(98) 91111-1111</p>
+                </div>
+                <div>
+                    <h3 class="text-xl text-[#382110] font-bold mb-2">Endereço</h3>
+                    <p class="font-medium hover:underline"><a href="https://maps.app.goo.gl/uyxRkku4tBFHbPzS8"
+                            target="_blank">Prédio NN Center - Av. Acre - Turu, São Luís - MA, 65066-620</a></p>
+                </div>
+            </div>
+            <div class="flex flex-col gap-y-3">
+                <div>
+                    <h3 class="text-xl text-[#382110] font-bold mb-2">Opções</h3>
+                    <div class="flex gap-x-3">
+                        <p class="bg-[#d3d3d3] rounded font-semibold px-2"><i class="fa-solid fa-motorcycle"></i>
+                            Delivery</p>
+                        <p class="bg-[#d3d3d3] rounded font-semibold px-2"><i class="fa-solid fa-utensils"></i>
+                            Estabelecimento</p>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <h3 class="text-xl text-[#382110] font-bold mb-2">Pagamento</h3>
+                    <div class="flex gap-x-3">
+                        <p class="bg-[#d3d3d3] rounded font-semibold px-2"><i class="fa-solid fa-money-bill"></i>
+                            Dinheiro</p>
+                        <p class="bg-[#d3d3d3] rounded font-semibold px-2"><i class="fa-brands fa-pix"></i> Pix Manual:
+                            3243243242432</p>
+                    </div>
+                    <p class="font-bold mt-2">Cartões:</p>
+                    <div>
+                        <ul class="flex gap-3">
+                            <li class="bg-[#d3d3d3] rounded font-semibold px-2"><i class="fa-solid fa-credit-card"></i>
+                                Elo</li>
+                            <li class="bg-[#d3d3d3] rounded font-semibold px-2"><i class="fa-brands fa-cc-visa"></i>
+                                Visa</li>
+                            <li class="bg-[#d3d3d3] rounded font-semibold px-2"><i
+                                    class="fa-brands fa-cc-mastercard"></i> Mastercad</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <button id="close-modal-details">Fechar</button>
+        </div>
+    </div>
+
+    <footer class="w-full py-1 fixed bottom-0 z-40 flex items-center justify-center" id="card-btn">
+        <button class="flex items-center gap-2 text-white font-bold" id="button">
+            (<span id="card-count">0</span>)
+            Veja meu carrinho
+            <i class="fa fa-cart-plus text-lg text-white"></i>
+        </button>
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    
+    <script src="script.js"></script>
+</body>
+
+</html>
